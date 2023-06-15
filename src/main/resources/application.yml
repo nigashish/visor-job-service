@@ -1,0 +1,34 @@
+server:
+  port: 9199
+spring:
+  application:
+    name: VISOR-JOB-SERVICE
+  datasource:
+    url: jdbc:postgresql://localhost:5432/accelerate_migrate_dev
+    username: accelerate
+    password: password
+ 
+    hikari:
+      connection-timeout: 20000
+      minimum-idle: 1
+      maximum-pool-size: 2
+      idle-timeout: 30000
+      max-lifetime: 120000
+      auto-commit: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+logging:
+  level:
+    org:
+      hibernate:
+        type: error
+
+
