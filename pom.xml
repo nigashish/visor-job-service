@@ -74,5 +74,20 @@
 			</plugin>
 		</plugins>
 	</build>
-
+<dependencyManagement>
+		<dependencies>
+			<!--<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>-->
+			<dependency>
+				<groupId>com.accelerate.visor</groupId>
+                <artifactId>common-model-service</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
